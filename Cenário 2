@@ -1,0 +1,97 @@
+2º Cenário:
+Você está trabalhando como Analista de Qualidade em um projeto de integração com a ferramenta de gerenciamento de estoque Bling em um grande e-commerce. A equipe de desenvolvimento concluiu a implementação da integração e você é responsável por realizar os testes para garantir que a funcionalidade esteja funcionando corretamente.
+
+Sua tarefa:
+Descrever detalhadamente o plano de testes que você implementaria para validar a integração com a ferramenta Bling. Inclua no seu plano:
+
+1. Documentação e Materiais de Apoio:
+
+Identificação da documentação: Quais documentos e materiais de apoio serão utilizados para embasar o plano de testes? (Ex: documentação oficial da Bling, especificações técnicas da integração, requisitos do projeto, etc.)
+Mapeamento dos requisitos: Como você mapeará os requisitos da integração aos pontos de teste?
+Utilização de ferramentas: Quais ferramentas serão utilizadas para auxiliar na análise da documentação e no mapeamento dos requisitos? (Ex: ferramentas de gerenciamento de requisitos, ferramentas de análise de texto, etc.)
+2. Abrangência dos Testes:
+
+Funcionalidades: Quais funcionalidades da integração com a Bling serão testadas? (Ex: sincronização de produtos, atualização de estoque, processamento de pedidos, geração de relatórios, etc.)
+Priorização dos testes: Quais critérios serão utilizados para priorizar os testes? (Ex: criticidade da funcionalidade, impacto no negócio, riscos potenciais, etc.)
+3. Execução dos Testes:
+
+Dados de teste: Como você obterá os dados de teste necessários para os testes? (Ex: dados de produtos, dados de estoque, dados de pedidos, etc.)
+Ferramentas de automação: Quais ferramentas de automação serão utilizadas para executar os testes? (Ex: ferramentas de teste funcional, ferramentas de teste de API, etc.)
+Registro de resultados: Como você registrará os resultados dos testes? (Ex: ferramenta de gerenciamento de testes, planilhas eletrônicas, etc.)
+
+Resolução do Cenário:
+
+Plano de Testes para Integração com a Ferramenta Bling
+
+1. Documentação e Materiais de Apoio
+Identificação da Documentação:
+ - Documentação Oficial da Bling: 
+Será necessário a documentação oficial da Bling como um guia de integração visando entender todas as necessidades desde os formatos de dados aos códigos de resposta.
+ - Especificações Técnicas da Integração: 
+Documento constando toda análise de software e de regra de negócio estabelecidas conforme a integração foi implementada, constando também fluxos de dados, comunicações com banco de dados e endpoints criados. 
+ - Requisitos do Projeto: 
+Documento constando os requisitos funcionais e não funcionais da integração.
+
+Mapeamento dos Requisitos:
+Primeiramente deve ser criado uma relação que mapeie todos os requisitos funcionais e não funcionais criados para todos os casos de teste correspondentes.
+Após isso validar com a equipe de desenvolvimentos e outros analistas visando garantir que todos os requisitos sejam devidademente mapeados.
+
+Utilização de Ferramentas:
+ - Ferramentas de Gerenciamento de Requisitos: 
+Trello, Jira ou ClickUp para auxiliar o rastreio de requisitos e casos de teste.
+ - Ferramentas de Análise de Texto: 
+Ferramentas como Notion ou Confluence para organizar e analisar a documentação.
+ - Ferramentas de Diagramação: 
+Ferramentas como Lucidchart ou Visio podem ser usadas para criar diagramas de fluxo de dados e processos.
+
+2. Abrangência dos Testes
+
+Funcionalidades:
+ - Sincronização de Produtos:
+Verificar se os produtos são devidademente sincronizados entre o e-commerce e o Bling.
+ - Atualização de Estoque: 
+ Validar se quando alterado estoque no e-commerce altera corretamente no Bling e também quando alterado estoque no Bling verificar se altera também no e-commerce.
+ - Processamento de Pedidos: 
+Verificar se quando criado pedidos pelo e-commerce ele é devidamente processado e registrado no Bling.
+ - Geração de Relatórios: 
+Realizar verificação de dados em todos os relatório gerados pelo Bling verificando se não há inconsistencia de dados. 
+ - Tratamento de Erros: 
+Validar situação de erro, desde registros sendo populados de forma errônea propositalmente pra verificar como o sistema responde.
+
+Priorização dos Testes:
+ - Criticidade da Funcionalidade: 
+Priorizar testes de funcionalidades críticas como processamento de pedidos, sincronização de estoque e pagamentos.
+ - Impacto no Negócio: 
+Deve ser considerado impacto no negócio de acordo cada funcionalidade existente para que possa ter um cenário preparado caso necessário.
+ - Riscos Potenciais: 
+Avaliar os riscos associados a cada funcionalidade e priorizar testes essenciais relacionados a estes riscos.
+
+3. Execução dos Testes
+
+Dados de Teste:
+ - Dados de Produtos: 
+Criar um conjunto de dados de produtos fictícios que cubram diferentes cenários (produtos com diferentes atributos, produtos sem estoque, etc.).
+ - Dados de Estoque: 
+Simular adição e remoção de itens no estoque visando verificar se é realizada alteração de acordo.
+ - Dados de Pedidos: 
+Criar pedidos de teste com diferentes sitauções (pendente, processado, cancelado) para validar se está processando corretamente.
+ - Dados de Erro: 
+Validar situação de erro, desde registros sendo populados de forma errônea propositalmente pra verificar como o sistema responde.
+
+Ferramentas de Automação:
+ - Ferramentas de Teste Funcional: 
+Selenium ou Cypress para automação de testes de interface.
+ - Ferramentas de Teste de API:
+Postman ou SoapUI para testar os endpoints da integração.
+ - Ferramentas de Teste de Desempenho: 
+JMeter ou Gatling podem ser usadas para testar o desempenho da integração.
+
+Registro de Resultados:
+ - Ferramenta de Gerenciamento de Testes: 
+Utilizar ferramentas como TestRail ou Zephyr para registrar e acompanhar os resultados dos testes.
+ - Planilhas Eletrônicas: 
+Utilizar Excel ou Google Sheets para documentar resultados de testes manuais e relatórios de bugs.
+
+Conclusão
+Este plano de testes detalhado visa garantir que a integração com a ferramenta Bling funcione corretamente. 
+Para resolução desse cenário busquei informações de diversas fontes para garantir que atendesse as necessidades do cenário.
