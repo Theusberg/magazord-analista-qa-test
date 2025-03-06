@@ -34,7 +34,7 @@ Documento constando os requisitos funcionais e não funcionais da integração.
 
 Mapeamento dos Requisitos:
 Primeiramente deve ser criado uma relação que mapeie todos os requisitos funcionais e não funcionais criados para todos os casos de teste correspondentes.
-Após isso validar com a equipe de desenvolvimentos e outros analistas visando garantir que todos os requisitos sejam devidademente mapeados.
+Após isso validar com a equipe de desenvolvimentos e outros analistas visando garantir que todos os requisitos sejam devidamente mapeados.
 
 Utilização de Ferramentas:
  - Ferramentas de Gerenciamento de Requisitos: 
@@ -48,13 +48,13 @@ Ferramentas como Lucidchart ou Visio podem ser usadas para criar diagramas de fl
 
 Funcionalidades:
  - Sincronização de Produtos:
-Verificar se os produtos são devidademente sincronizados entre o e-commerce e o Bling.
+Verificar se os produtos são devidamente sincronizados entre o e-commerce e o Bling.
  - Atualização de Estoque: 
  Validar se quando alterado estoque no e-commerce altera corretamente no Bling e também quando alterado estoque no Bling verificar se altera também no e-commerce.
  - Processamento de Pedidos: 
 Verificar se quando criado pedidos pelo e-commerce ele é devidamente processado e registrado no Bling.
  - Geração de Relatórios: 
-Realizar verificação de dados em todos os relatório gerados pelo Bling verificando se não há inconsistencia de dados. 
+Realizar verificação de dados em todos os relatório gerados pelo Bling verificando se não há inconsistência de dados. 
  - Tratamento de Erros: 
 Validar situação de erro, desde registros sendo populados de forma errônea propositalmente pra verificar como o sistema responde.
 
@@ -74,9 +74,9 @@ Criar um conjunto de dados de produtos fictícios que cubram diferentes cenário
  - Dados de Estoque: 
 Simular adição e remoção de itens no estoque visando verificar se é realizada alteração de acordo.
  - Dados de Pedidos: 
-Criar pedidos de teste com diferentes sitauções (pendente, processado, cancelado) para validar se está processando corretamente.
+Criar pedidos de teste com diferentes situações (pendente, processado, cancelado) para validar se está processando corretamente.
  - Dados de Erro: 
-Validar situação de erro, desde registros sendo populados de forma errônea propositalmente pra verificar como o sistema responde.
+Validar situação de erro, desde registros sendo populados de forma errônea propositalmente para verificar como o sistema responde.
 
 Ferramentas de Automação:
  - Ferramentas de Teste Funcional: 
