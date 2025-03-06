@@ -1,0 +1,121 @@
+1º Cenário:
+Você está trabalhando como Analista de Qualidade em um projeto de integração de marketplaces de terceiros, como Amazon e Mercado Livre, em um grande e-commerce. A equipe de desenvolvimento concluiu a implementação da integração e você é responsável por realizar os testes para garantir que a funcionalidade esteja funcionando corretamente. Um detalhe importante, nessa integração, temos integração de estoque, anúncios, faturamento, pedidos e preço.
+
+Sua tarefa:
+Descrever detalhadamente o plano de testes que você implementaria para validar a integração com o marketplace. Inclua no seu plano:
+
+1. Documentação e Materiais de Apoio:
+
+Identificação da documentação: Quais documentos e materiais de apoio serão utilizados para embasar o plano de testes? (Ex.: documentação oficial dos marketplaces, especificações técnicas da integração, requisitos do projeto, etc.)
+Análise da documentação: Como você analisará a documentação para identificar os pontos de teste?
+Mapeamento dos requisitos: Como você mapeará os requisitos da integração aos pontos de teste?
+Utilização de ferramentas: Quais ferramentas serão utilizadas para auxiliar na análise da documentação e no mapeamento dos requisitos? (Ex.: ferramentas de gerenciamento de requisitos, ferramentas de análise de texto, etc.)
+2. Abrangência dos Testes:
+
+Funcionalidades: Quais funcionalidades da integração serão testadas?
+Casos de uso: Quais casos de uso serão considerados para cada funcionalidade? (Ex.: cenários de sucesso, cenários de falha, cenários de carga, etc.)
+Priorização dos testes: Quais critérios serão utilizados para priorizar os testes? (Ex.: criticidade da funcionalidade, impacto no negócio, riscos potenciais, etc.)
+3. Execução dos Testes:
+
+Ambiente de teste: Qual ambiente de teste será utilizado? (Ex.: ambiente de homologação, ambiente de produção, etc.)
+Dados de teste: Como você obterá os dados de teste necessparios para os testes? (Ex.: dados de produtos, dados de pedidos, dados de usuários, etc.)
+Ferramentas de automação: Quais ferramentas de automação serão utilizadas para executar os testes? (Ex.: ferramentas de teste funcional, ferramentas de teste de API, etc.)
+Registro de resultados: Como você registrará os resultados dos testes? (Ex.: ferramenta de gerenciamento de testes, planilhas eletrônicas, etc.)
+
+Resolução do Cenário:
+
+1° Cenário:
+
+1. Documentação e Materiais de Apoio:
+
+Identificação da Documentação:
+ - Documentação oficial dos marketplaces:
+Para um integração é necessário ter ciência dos materiais e documentos oficiais disponibilizados muitas vezes pelos sites oficiais, como um guia de integração, API Docs e as políticas de uso, nesse caso da Amazon e do Mercado Livre.
+ - Especificações Técnicas da Integração:
+Documento constando toda análise de software e de regra de negócio estabelecidas conforme a integração foi implementada, constando também fluxos de dados, comunicações com banco de dados e endpoints criados. 
+ - Requisitos do projeto:
+Documento constando os requisitos funcionais e não funcionais da integração, desde o gerenciamento do estoque, anúncios, faturamentos, pedidos e preços.
+Seria interessante também criar um manual de usuário contendo informações explicativas para que sirva de guia no uso das funcionalidades integradas.
+
+Análise da Documentação:
+ - Revisão Detalhada:
+Revisar todos os documentos para comprender todas as funcionalidades e os requisitos.
+ - Identificação de Pontos Críticos:
+Verificar onde há necessidade de maior atenção como em pagamentos, processamentos de pedidos e a sincronização do estoque em tempo real;
+ - Checklist :
+Criar uma lista contendo todas as informações de forma mais simples todavia completa para que seja verificado e validados se tudo está de acordo conforme planejado.
+
+Mapeamento dos Requisitos:
+Primeiramente deve ser criado uma relação que mapeie todos os requisitos funcionais e não funcionais criados para todos os casos de teste correspondentes.
+Após isso validar com a equipe de desenvolvimentos e outros analistas visando garantir que todos os requisitos sejam devidademente mapeados.
+
+Utilização de Ferramentas:
+- Ferramentas de Gerenciamento de Requisitos:
+Trello, Jira ou ClickUp para auxiliar o rastreio de requisitos e casos de teste.
+ - Ferramentas de Análise de Texto:
+Ferramentas como Notion ou Confluence para organizar e analisar a documentação.
+ 
+ --
+ 
+ 2. Abrangência dos Testes
+ 
+Funcionalidades:
+ - Integração de Estoque:
+Sincronia entre o que há de estoque entre o e-commerce e o marketplace utilizado.
+ - Anúncios:
+Verificar a criação, atualização e remoção de anúncios no marketplace utilizado. 
+ - Faturamento:
+Verificar o processamento dos pagamentos e a geração de fatura.
+ - Pedidos:
+Recebimento de pedidos bem como o processamento do mesmo no marketplace.
+ - Preços:
+Sincronização de preços entre o e-commerce e o marketplace utilizado.
+ 
+Casos de Uso:
+ - Cenários de Sucesso:
+Elaborar testes considerando que todas integreções possam funcionar como esperado.
+ - Cenários de Falha:
+Criar um cenário de teste visando buscar erros, como problemas de sincronização e erros de APIs e até mesmo erros estruturais.
+ - Cenários de Carga:
+Realizar um teste de estresse, saturando o sistema com uma grande quantidade de solicitações e cargas de trabalho.
+
+Priorização dos Testes:
+ - Criticidade da Funcionalidade:
+Priorizar testes de funcionalidades críticas como processamento de pedidos, sincronização de estoque e pagamentos.
+ - Impacto no Negócio:
+Deve ser considerado impacto no negócio de acordo cada funcionalidade existente para que possa ter um cenário preparado caso necessário.
+ - Riscos Potenciais: 
+ Avaliar os riscos associados a cada funcionalidade e priorizar testes essenciais relacionados a estes riscos.
+ 
+--
+ 
+ 3. Execução dos Testes
+ 
+Ambiente de Teste:
+Utilizar um ambiente de teste que simule o ambiente de produção porém sem impactar nos dados reais.
+Utilizar a base de produção apenas para realizar um possível teste antes do lançamento oficial da mesma.
+ 
+Dados de Teste:
+ - Dados de Produtos:
+Criar produtos de teste apenas para verificar se o sistema está se comportando conforme previsto em relação a sincronização de estoque e preço.
+ - Dados de Pedidos: 
+Simular pedidos de teste para verificar se o processamento está sendo efetuado confrome esperado bem como o faturamento.
+ - Dados de Usuários:
+ Criar usuário teste para simular interações na visão do usuário.
+ 
+Ferramentas de Automação:
+ - Testes Funcionais:
+Selenium ou Cypress para automação de testes de interface.
+ - Testes de API:
+Postman ou SoapUI para testar os endpoints da integração.
+  - Testes de Carga:
+JMeter ou K6 para simular cenários de carga.
+
+Registro de Resutlados:
+ - Ferramenta de gerenciamento de Testes:
+Utilizar ferramentas como TestRail ou Zephyr para registrar e acompanhar os resultados dos testes.
+ - Planilhas eletrôncias:
+Utilizar Excel ou Google Sheets para documentar resultados de testes manuais e relatórios de bugs.
+
+Observação:
+Desenvolvi a criação desse cenário buscando informações em diversas fontes pois onde trabalho hoje utilizamos um software privado que elimina a necessidade de softwares de terceiros, dessa forma tentei esclarecer os pontos citados de forma sucinta e eficaz.
