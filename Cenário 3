@@ -1,0 +1,22 @@
+3º Cenário:
+O cliente entrou em contato devido a uma questão relacionada aos seus anúncios. Quando os itens ficam sem estoque, em vez de serem marcados como "Pausado (sem estoque)", eles estão apenas sendo marcados como "Pausado", o que faz com que os anúncios permaneçam disponíveis para venda no Mercado Livre, mesmo sem estoque real. Isso está resultando em pedidos sendo feitos para itens sem estoque disponível, o que prejudica a reputação do cliente, pois ele precisa cancelar as vendas devido à falta de estoque.
+
+Atualmente, o cliente possui 38 anúncios com a situação "Pausado", e ele relata que não os marcou manualmente como pausados.Quando enviamos uma atualização manual de estoque, o anúncio muda para a situação "Pausado sem estoque" e fica indisponível para venda no Mercado Livre. Ao verificar o log dos anúncios, não encontramos registros de envio de informação de estoque igual a zero quando o estoque se esgota no Magazord. Um exemplo de anúncio afetado é o seguinte: MLB3097510082. Envio em anexo um print do anúncio e um print do log, mostrando que não foram encontradas informações registradas na abertura da atividade.
+
+Para o caso acima, descreva quais seriam os passos para analise e identificação do problema tendo em vista a documentação do próprio ML. Visto que não possui acesso ao painel seller do cliente e nem ao painel do mesmo no ERP Magazord, quais seriam as possíveis hipóteses do erro.
+
+Resolução do Cenário:
+Visando identificar o problema podemos seguir os seguintes passos:
+1° Revisar a documentação do Mercado Livre sobre gestão de estoque e anúncios verificando como o ML trata a atualização dos estoques e as diferentes situações de anúncios;
+2° Analisar o fluxo de atualização de estoque, verificando como é enviado a atualização do cliente para o ML, visando verificar se há falha no processo de envio de informações do estoque;
+3° Verificar se a integração entre o cliente e o ML está configurada corretamente para enviar atualizações de estoque seja este muito ou nulo;
+4° Revisar os Logs gerados a partir da atualização de estoque da Magazord e do Mercado livre para verificar se há registros de envio de estoque nulo;
+5° Realizar um teste controlado com diferentes tipos de estoque principalmente com estoque zerado e verificar como o sistema responde de forma que possa ajudar a identificar o problema;
+6° Pode ser realizado um contato com a equipe de suporte do ML de forma a encontrar uma resolução para o problema ou até mesmo para verificar se não é uma situação que já ocorreu anteriormente e eles já possuem uma forma de ajudar na resolução do problema;
+
+Possíveis Hipóteses para o Erro:
+1° Pode haver uma falha na integração entre a Magazord e o ML sendo que essa pode estar configurada de forma errada para atualizar o estoque;
+2° Pode ser apenas um bug que está impedindo a atualização da situação;
+3° O sistema da Magazord pode ter alguma falha que faz com que a atualização não ocorra ou até aconteça, porém falhe em algum ponto;
+4° Pode estar ocorrendo um atraso na sincronização dos dados resultado na demora para atualizar as situações dos registros;
+5° A API utilizada na integração pode ter algumas limitações ou restrições que acabam afetando o funcionamento correto dessa função;
