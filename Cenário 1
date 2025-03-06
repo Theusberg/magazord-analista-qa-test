@@ -39,7 +39,7 @@ Seria interessante também criar um manual de usuário contendo informações ex
 
 Análise da Documentação:
  - Revisão Detalhada:
-Revisar todos os documentos para comprender todas as funcionalidades e os requisitos.
+Revisar todos os documentos para compreender todas as funcionalidades e os requisitos.
  - Identificação de Pontos Críticos:
 Verificar onde há necessidade de maior atenção como em pagamentos, processamentos de pedidos e a sincronização do estoque em tempo real;
  - Checklist :
@@ -47,7 +47,7 @@ Criar uma lista contendo todas as informações de forma mais simples todavia co
 
 Mapeamento dos Requisitos:
 Primeiramente deve ser criado uma relação que mapeie todos os requisitos funcionais e não funcionais criados para todos os casos de teste correspondentes.
-Após isso validar com a equipe de desenvolvimentos e outros analistas visando garantir que todos os requisitos sejam devidademente mapeados.
+Após isso validar com a equipe de desenvolvimentos e outros analistas visando garantir que todos os requisitos sejam devidamente mapeados.
 
 Utilização de Ferramentas:
 - Ferramentas de Gerenciamento de Requisitos:
@@ -73,7 +73,7 @@ Sincronização de preços entre o e-commerce e o marketplace utilizado.
  
 Casos de Uso:
  - Cenários de Sucesso:
-Elaborar testes considerando que todas integreções possam funcionar como esperado.
+Elaborar testes considerando que todas integrações possam funcionar como esperado.
  - Cenários de Falha:
 Criar um cenário de teste visando buscar erros, como problemas de sincronização e erros de APIs e até mesmo erros estruturais.
  - Cenários de Carga:
@@ -99,7 +99,7 @@ Dados de Teste:
  - Dados de Produtos:
 Criar produtos de teste apenas para verificar se o sistema está se comportando conforme previsto em relação a sincronização de estoque e preço.
  - Dados de Pedidos: 
-Simular pedidos de teste para verificar se o processamento está sendo efetuado confrome esperado bem como o faturamento.
+Simular pedidos de teste para verificar se o processamento está sendo efetuado conforme esperado bem como o faturamento.
  - Dados de Usuários:
  Criar usuário teste para simular interações na visão do usuário.
  
@@ -111,10 +111,10 @@ Postman ou SoapUI para testar os endpoints da integração.
   - Testes de Carga:
 JMeter ou K6 para simular cenários de carga.
 
-Registro de Resutlados:
+Registro de Resultados:
  - Ferramenta de gerenciamento de Testes:
 Utilizar ferramentas como TestRail ou Zephyr para registrar e acompanhar os resultados dos testes.
- - Planilhas eletrôncias:
+ - Planilhas eletrônicas:
 Utilizar Excel ou Google Sheets para documentar resultados de testes manuais e relatórios de bugs.
 
 Observação:
