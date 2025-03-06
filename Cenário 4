@@ -1,0 +1,136 @@
+4º Cenário:
+Você está encarregado de testar a validação de dados cadastrais em um sistema de gerenciamento de usuários. O sistema possui os seguintes campos de cadastro:
+
+Nome completo
+E-mail
+Número de telefone
+Data de nascimento
+Endereço (com campos para rua, cidade, estado e CEP)
+Houve alterações nos campos mencionados acima no cadastro do cliente, quais testes você faria para validar que o(s) campo(s) esta(ão) funcionando conforme esperado?
+Orientação: Crie casos de teste para validar a entrada de dados nos campos modificados.
+
+Resolução do Cenário:
+
+Tipos de teste
+1° Teste de Obrigatoriedade:
+Validar os campos obrigatórios presente na tela de modo que seja verificado se o sistema apresenta mensagem de alerta apropriada a respeito do campo que não foi preenchido.
+
+2° Teste de Formato e Máscara:
+Verificar se informado diferente tipos de dados desde números, caracteres e símbolos o campo valida corretamente dado o formato e tamanho dele;
+Verificar também caso o campo exija máscara como CPF, RG, CEP... o dado preenchido é corretamente adaptado.
+
+3° Teste de Consistência e Integridade:
+Tentar inserir informações incorretas e incongruentes como um registro já existente ou um dado inválido.
+
+4° Teste de Campos Opcionais:
+Realizar testes verificando se realmente os campos são opcionais e se são corretamente populados quando utilizados.
+
+5° Teste de Usabilidade:
+Verificar se as mensagens de erro, alerta e hint são bem claros;
+Verificar funcionalidades como 'TAB' e 'Enter' funcionam corretamente.
+
+Caso de teste:
+---------------------------------------------------------------------------------------------
+Caso de teste 1 - Validação do Nome Completo:
+Objetivo:
+Verificar se o campo de Nome completo está sendo devidamente populado e validado;
+
+Pré-condição:
+O usuário deve estar na tela de inclusão ou manutenção do cadastro de pessoa.
+
+Passos:
+1° Inserir um nome válido;
+2° Inserir um nome contendo números;
+3° Inserir um nome contendo caracteres especiais;
+4° Inserir um nome com o máximo de caracteres possíveis;
+5° Deixar o campo em branco e salvar; 
+
+Resultado esperado:
+- O sistema deve aceitar apenas letras e espaço para o nome;
+- Caso informado um registro inválido deve ser apresentado uma mensagem mostrando o problema;
+- O campo deve ter uma limitação de caracteres;
+
+
+---------------------------------------------------------------------------------------------
+Caso de teste 2 - Validação do E-mail:
+Objetivo:
+Verificar se o campo do E-mail está sendo devidamente populado e validado;
+
+Pré-condição:
+O usuário deve estar na tela de inclusão ou manutenção do cadastro de pessoa.
+
+Passos:
+1° Informar um e-mail válido;
+2° Informar um e-mail com um formato diferente seja sem domínio, sem "@" e utilizando caracteres inválidos;
+3° Deixar o campo em branco e salvar; 
+
+Resultado esperado:
+- Caso o registro for válido ele será aceito;
+- O sistema só vai aceitar o formato válido de e-mail;
+- Caso informado um registro inválido deve ser apresentado uma mensagem mostrando o problema;
+
+---------------------------------------------------------------------------------------------
+Caso de teste 3 - Validação do CPF:
+Objetivo:
+Verificar se o campo do Nome completo está sendo devidamente populado e validado;
+
+Pré-condição:
+O usuário deve estar na tela de inclusão ou manutenção do cadastro de pessoa.
+
+Passos:
+1° Informar um CPF válido;
+2° Informar CPF com mais e com menos dígitos;
+3° Informar todos os caracteres iguais;
+4° Tentar informar caracteres inválidos;
+5° Tentar salvar sem informar nada;
+
+Resultado esperado:
+- O sistema deve permitir apenas CPF válido;
+- Quando informado um registro errado deve apresentado mensagem mostrando o problema;
+- Não deve salvar registro nulo quando obrigatório;
+- Não deve permitir a duplicidade de registros;
+
+---------------------------------------------------------------------------------------------
+Caso de teste 4 - Validação da Data de Nascimento:
+Objetivo:
+Verificar se o campo da Data de Nascimento está sendo devidamente populado e validado;
+
+Pré-condição:
+O usuário deve estar na tela de inclusão ou manutenção do cadastro de pessoa.
+
+Passos:
+1° Informar uma data válida;
+2° Informar uma data futura;
+3° Informar uma data no formato errado saindo do padrão dia/mês/ano;
+4° Tentar informar texto ou caracteres especiais;
+5° Tentar salvar sem informar nada;
+
+Resultado esperado:
+- Deve impedir a inclusão de data superior a data atual;
+- Deve seguir o padrão de dia/mês/ano;
+- Não deve permitir informar outros caracteres se não números;
+- Não deve salvar registro nulo quando obrigatório;
+
+---------------------------------------------------------------------------------------------
+Caso de teste 5 - Validação do Endereço:
+Objetivo:
+Verificar se o campo do Endereço está sendo devidamente populado e validado;
+
+Pré-condição:
+O usuário deve estar na tela de inclusão ou manutenção do cadastro de pessoa.
+
+Passos:
+1° Informar um CEP válido;
+2° Verificar se ao popular o CEP é também populado outras informações como bairro e rua por exemplo;
+3° Verificar se será possível informar um CEP que corresponda a outra região (opcional);
+4° Tentar informar um CEP inválido;
+5° Tentar informar dados de bairro e rua que não fazer parte do mesmo CEP;
+6° Tentar informar caracteres de texto e caracteres especiais;
+7° Tentar incluir sem informar endereço;
+
+Resultado esperado:
+- Deve aceitar apenas CEP que seja válido;
+- Caso haja vínculo de rua e bairro ao CEP utilizado deve ser populado automaticamente;
+- Não deve ser possível informar CEP inválido;
+- Ao informar um dado inválido deve ser apresentado uma mensagem que conste o problema;
+- Não deve ser possível realizar a inclusão de um registro nulo para a aba 'Endereço'.
